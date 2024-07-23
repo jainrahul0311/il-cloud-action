@@ -14,6 +14,6 @@ jobs:
         run: docker pull 
       - name: Run IL-CLI
         run: |
-          echo ${{github.ref}}
+          echo ${{github.ref}} 
           cd ${{github.workspace}}
           docker run -e IMAGING_CLOUD_API_KEY=${{secrets.IMAGING_CLOUD_API_KEY}} -v $(pwd):/home/carl/extras/source castbuild/imaging-cloud-action:latest
